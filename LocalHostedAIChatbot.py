@@ -61,7 +61,7 @@ def clean_response(text):
 
 
 
-def goon(prompt):
+def chatbot(prompt):
     #system message
     data = {
         "model": "mistral",
@@ -112,7 +112,7 @@ def send_message():
     entry.delete(0, tk.END)
     chat_window.see(tk.END)
     
-    response = goon(user_input)
+    response = chatbot(user_input)
 
     chat_window.insert(tk.END, f"Bot: {response}\n\n", "bot")
     chat_window.config(state=tk.DISABLED)
@@ -158,7 +158,7 @@ main_frame.pack(expand=True, fill="both", padx=10, pady=10)
 chat_frame = tk.Frame(main_frame, bg="#1e1e1e")
 chat_frame.grid(row=0, column=0, sticky="nsew")
 
-# --- GoonBot Sprite (Right Side) ---
+# --- Sprite (Right Side) ---
 sprite_frame = tk.Frame(main_frame, bg="#1e1e1e")
 sprite_frame.grid(row=0, column=1, sticky="ns")  # Fixed width
 
@@ -184,11 +184,11 @@ sprite_path = os.path.join(script_dir, "Example.png")  # Dynamically find "user 
 
 # --- Load and Display the Sprite (Inside Right Frame) ---
 if os.path.exists(sprite_path):
-    goonbot_image = Image.open(sprite_path)
-    goonbot_image = goonbot_image.resize((400, 400), Image.Resampling.LANCZOS)  # Resize image
-    goonbot_photo = ImageTk.PhotoImage(goonbot_image)
+    user_image = Image.open(sprite_path)
+    user_image = user_image.resize((400, 400), Image.Resampling.LANCZOS)  # Resize image
+    user_photo = ImageTk.PhotoImage(user_image)
 
-    sprite_label = tk.Label(sprite_frame, image=goonbot_photo, bg="#1e1e1e")
+    sprite_label = tk.Label(sprite_frame, image=user_photo, bg="#1e1e1e")
     sprite_label.pack()
 #err check
 else:

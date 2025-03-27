@@ -3,7 +3,8 @@ A local chatbot that uses Ollama Mistral LLM and offers personality customizatio
 
 
 # FIRST TIME SETUP
-1. Go to https://ollama.com/download and download
+Download Iceberg-Regular.ttf and LocalHostedAIChatbot.py into folder of your choice
+Go to https://ollama.com/download and download
 OPEN TERMINAL
 RUN "ollama pull mistral"
 

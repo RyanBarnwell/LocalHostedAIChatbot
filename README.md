@@ -1,5 +1,5 @@
 # LocalHostedAIChatbot
-A local chatbot that uses Ollama Mistral LLM and offers personality customization and a GUI
+A local chatbot that uses Ollama Mistral LLM and offers personality customization, a GUI, and text-to-speech
 
 
 # FIRST TIME SETUP
